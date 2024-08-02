@@ -10,8 +10,8 @@ import { FaWhatsappSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 const Intoduction = () => {
     const router=useRouter()
-    const phoneNumber = '9385352051';
-    const message = 'Hello, I am Pradeep Sakthi!';
+    const phoneNumber = '919385352051';
+    const message = 'Hello, I am Pradeep Sakthi S';
 
 
     
@@ -34,7 +34,7 @@ const Intoduction = () => {
                 router.push('https://github.com/pradeep-145')
             }}> <FaLinkedin size={30}/> </button>
             <button className="" onClick={()=>{
-                router.push('https://wa.me/qr/LECHPSE563DAD1')
+                router.push(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`)
             }}> <FaWhatsappSquare size={30}/> </button>
            
         </div>
