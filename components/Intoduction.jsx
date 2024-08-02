@@ -22,19 +22,19 @@ const Intoduction = () => {
         <p className="text-lg flex flex-row  leading-10 text-slate-600">I am a full stack developer</p>
         <div className="gap-8 flex flex-row" >
             <button className="" onClick={()=>{
-                router.push('https://github.com/pradeep-145')
+                window.open('https://github.com/pradeep-145')
             }}> <IoLogoGithub size={30}/> </button>
             <button className="" onClick={()=>{
-                router.push('https://github.com/pradeep-145')
+                window.open('https://www.instagram.com/pradeepsakthi_20_2004?igsh=c3ZoMHB5NTAzeGZh')
             }}> <FaInstagramSquare size={30}/> </button>
             <button className="" onClick={()=>{
-                router.push('https://github.com/pradeep-145')
+                window.open('mailto:spradeepsakthi2004@gmail.com')
             }}> <CgMail size={30}/> </button>
             <button className="" onClick={()=>{
-                router.push('https://github.com/pradeep-145')
+                window.open('https://www.linkedin.com/in/pradeep-sakthi-sridharan-2364ba256/')
             }}> <FaLinkedin size={30}/> </button>
             <button className="" onClick={()=>{
-                router.push(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`)
+                window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`)
             }}> <FaWhatsappSquare size={30}/> </button>
            
         </div>
