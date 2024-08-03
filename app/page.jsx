@@ -12,16 +12,16 @@ export default function Home() {
       <section className="max-container  padding-x pt-28 h-screen w-full">
         <Introduction></Introduction>
       </section>
-      <section className="max-container w-full  padding-x padding-y">
+      <section className="max-container w-full  padding-x padding-y" id="about-me">
         <AboutMe/>
       </section>
-      <section className="max-container  w-full padding-x padding-y">
+      <section className="max-container  w-full padding-x padding-y"id='education'>
         <Education/>
       </section>
-      <section className="max-container w-full  padding-x padding-y">
+      <section className="max-container w-full  padding-x padding-y" id='skills'>
         <Skills/>
       </section>
-      <section className="max-container w-full padding-x padding-y">
+      <section className="max-container w-full padding-x padding-y"id='projects'>
         <Projects/>
       </section>
       

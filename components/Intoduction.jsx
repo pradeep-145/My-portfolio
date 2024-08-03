@@ -16,31 +16,31 @@ const Intoduction = () => {
 
     
   return (
-    <section className="p-1 flex flex-1 md:flex-row block max-md:flex-col gap-44 justify-center">
+    <section className="p-1 flex flex-1 md:flex-row  max-md:flex-col gap-44 justify-center">
       <div className="flex flex-col flex-1 justify-center items-center">
-        <h1 className="max-md:text-4xl  max-sm:text-3xl leading-9 max-lg:text-4xl text-4xl flex flex-row font-bold text-slate-600">Hi, I'm Pradeep Sakthi</h1>
+        <h1 className="max-md:text-4xl dark:text-neutral-300  max-sm:text-3xl leading-9 max-lg:text-4xl text-4xl flex flex-row font-bold text-slate-600">Hi, I'm Pradeep Sakthi</h1>
         <p className="text-lg flex flex-row  leading-10 text-slate-600">I am a full stack developer</p>
         <div className="gap-8 flex flex-row mt-4" >
-            <button className="" onClick={()=>{
+            <button className="dark:bg-slate-400 dark:rounded-full hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://github.com/pradeep-145')
             }}> <IoLogoGithub size={30}/> </button>
-            <button className="" onClick={()=>{
+            <button className="dark:bg-slate-400 dark:rounded-[4px] hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://www.instagram.com/pradeepsakthi_20_2004?igsh=c3ZoMHB5NTAzeGZh')
             }}> <FaInstagramSquare size={30}/> </button>
-            <button className="" onClick={()=>{
+            <button className="dark:bg-slate-400 dark:rounded-md hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZcQsbcHpwhgSnBqxVDGDRMnrmmdglJDTkNRwfNvpZRjXbWlrZMHlnSFXPfkfPzmDGSJPL')
             }}> <CgMail size={30}/> </button>
-            <button className="" onClick={()=>{
+            <button className="dark:bg-slate-400 dark:rounded-[4px] hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://www.linkedin.com/in/pradeep-sakthi-sridharan-2364ba256/')
             }}> <FaLinkedin size={30}/> </button>
-            <button className="" onClick={()=>{
+            <button className="dark:bg-slate-400 hover:scale-[1.1] duration-300 dark:rounded-[4px]" onClick={()=>{
                 window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`)
             }}> <FaWhatsappSquare size={30}/> </button>
            
         </div>
       </div>
       <div className="flex flex-1">
-        <Image src={profile} alt="Profile Picture" width={550} height={650} className=" rounded-md hover:scale-[1.01] duration-500 "></Image>
+        <Image src={profile} alt="Profile Picture" width={550} height={650} className=" rounded-md hover:scale-[1.01] duration-300 duration-500 "></Image>
       </div>
     </section>
   )
