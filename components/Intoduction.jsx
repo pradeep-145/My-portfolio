@@ -11,16 +11,16 @@ import { FaLinkedin } from "react-icons/fa";
 const Intoduction = () => {
     const router=useRouter()
     const phoneNumber = '919385352051';
-    const message = 'Hello, I am Pradeep Sakthi S';
+    const message = 'Hello, Pradeep Sakthi!';
 
 
     
   return (
-    <section className="p-1 flex flex-1 md:flex-row  max-md:flex-col gap-44 justify-center">
+    <section className="p-1 flex flex-1 md:flex-row block max-md:flex-col gap-44 justify-center">
       <div className="flex flex-col flex-1 justify-center items-center">
         <h1 className="max-md:text-4xl  max-sm:text-3xl leading-9 max-lg:text-4xl text-4xl flex flex-row font-bold text-slate-600">Hi, I'm Pradeep Sakthi</h1>
         <p className="text-lg flex flex-row  leading-10 text-slate-600">I am a full stack developer</p>
-        <div className="gap-8 flex flex-row" >
+        <div className="gap-8 flex flex-row mt-4" >
             <button className="" onClick={()=>{
                 window.open('https://github.com/pradeep-145')
             }}> <IoLogoGithub size={30}/> </button>
@@ -28,7 +28,7 @@ const Intoduction = () => {
                 window.open('https://www.instagram.com/pradeepsakthi_20_2004?igsh=c3ZoMHB5NTAzeGZh')
             }}> <FaInstagramSquare size={30}/> </button>
             <button className="" onClick={()=>{
-                window.open('mailto:spradeepsakthi2004@gmail.com')
+                window.open('https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZcQsbcHpwhgSnBqxVDGDRMnrmmdglJDTkNRwfNvpZRjXbWlrZMHlnSFXPfkfPzmDGSJPL')
             }}> <CgMail size={30}/> </button>
             <button className="" onClick={()=>{
                 window.open('https://www.linkedin.com/in/pradeep-sakthi-sridharan-2364ba256/')

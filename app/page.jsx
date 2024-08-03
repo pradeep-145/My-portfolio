@@ -8,11 +8,11 @@ import Projects from "@components/Projects";
 
 export default function Home() {
   return (
-    <main>
-      <section className="max-container padding-x pt-28 h-screen w-full">
+    <main className="flex flex-col ">
+      <section className="max-container  padding-x pt-28 h-screen w-full">
         <Introduction></Introduction>
       </section>
-      <section className="max-container w-full padding-x padding-y">
+      <section className="max-container w-full  padding-x padding-y">
         <AboutMe/>
       </section>
       <section className="max-container  w-full padding-x padding-y">
