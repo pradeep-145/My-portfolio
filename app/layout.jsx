@@ -13,7 +13,6 @@ export default function RootLayout({ children }) {
     }
     return 'Light';
   };
-
   useEffect(() => {
     const systemTheme = getSystemTheme();
     setMainTheme(systemTheme === 'Dark' ? 'dark-main' : 'main');
