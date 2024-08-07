@@ -14,10 +14,13 @@ module.exports = {
           palanquin: ['Palanquin', 'sans-serif'],
           montserrat: ['Montserrat', 'sans-serif'],
       },
+      
       colors: {
         'primary-orange': '#FF5722',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }

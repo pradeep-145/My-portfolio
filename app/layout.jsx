@@ -32,11 +32,12 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="icon" href="/images/profileLogo.png" />
       </head>
-      <body className="dark" >
+      <body className="dark selection:bg-sky-700" >
         <div className={mainTheme}>
           
         <div className={gradient}></div>
         </div>
+        
         <main className="app">
           <Nav onThemeChange={handleThemeChange}></Nav>
           {children}
