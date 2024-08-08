@@ -1,30 +1,34 @@
-import nodemailer from 'nodemailer';
 
-export default async function handler(req,res) {
-    const {email,name , description} = await req.json();
+import nodemailer from 'nodemailer';
+import { NextResponse } from 'next/server';
+
+export async function POST(req) {
+  try {
+    const { email, name, description } = await req.json();
 
     const Transport = nodemailer.createTransport({
-        host:'smtp.gmail.com',
-        port:465,
-        secure:true,
-        auth:{
-            user:process.env.EMAIL,
-            pass:process.env.PASSWORD
-        }
-    })
-    var mailOptions={
-        from:process.env.EMAIL,
-        to:email,
-        subject:name,
-        text:description
-    }
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+      }
+    });
 
-    Transport.sendMail(mailOptions,(err,info)=>{
-        if(err){
-            console.error(err.message);
-        }
-        else
-        console.log(info.response)
-    })
-    
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: email,
+      subject: name,
+      text: description
+    };
+
+    const info = await Transport.sendMail(mailOptions);
+    console.log('Message sent: %s', info.messageId);
+
+    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+  } catch (err) {
+    console.error(err.message);
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+  }
 }

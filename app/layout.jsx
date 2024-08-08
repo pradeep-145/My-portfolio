@@ -1,8 +1,9 @@
 "use client";
 import "@styles/globals.css";
-import Nav from "@components/Nav";
+import Nav from "@pages/Nav";
 import { useEffect, useState } from "react";
-
+import { Toaster, toast } from 'react-hot-toast';
+import 'react-toastify/dist/ReactToastify.css';
 export default function RootLayout({ children }) {
   const [mainTheme, setMainTheme] = useState();
   const [gradient, setGradient] = useState();
@@ -41,6 +42,8 @@ export default function RootLayout({ children }) {
         <main className="app">
           <Nav onThemeChange={handleThemeChange}></Nav>
           {children}
+          <Toaster position="top-center"
+          reverseOrder={false} />
         </main>
       </body>
     </html>

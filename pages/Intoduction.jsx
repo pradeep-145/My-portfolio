@@ -51,9 +51,6 @@ const Intoduction = () => {
             className="dark:bg-slate-400 dark:rounded-[4px] hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://www.instagram.com/pradeepsakthi_20_2004?igsh=c3ZoMHB5NTAzeGZh')
             }}> <FaInstagramSquare size={30}/> </motion.button>
-            {/* <button className="dark:bg-slate-400 dark:rounded-md hover:scale-[1.1] duration-300" onClick={()=>{
-                window.open('https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZcQsbcHpwhgSnBqxVDGDRMnrmmdglJDTkNRwfNvpZRjXbWlrZMHlnSFXPfkfPzmDGSJPL')
-            }}> <CgMail size={30}/> </button> */}
             <motion.button 
             initial={{y:-100,opacity:0}}
             whileInView={{y:0,opacity:1}}
@@ -61,10 +58,6 @@ const Intoduction = () => {
              className="dark:bg-slate-400 dark:rounded-[4px] hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://www.linkedin.com/in/pradeep-sakthi-sridharan-2364ba256/')
             }}> <FaLinkedin size={30}/> </motion.button>
-            {/* <button className="dark:bg-slate-400 hover:scale-[1.1] duration-300 dark:rounded-[4px]" onClick={()=>{
-                window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`)
-            }}> <FaWhatsappSquare size={30}/> </button>
-            */}
         </div>
         <div>
           <button className="mt-9  justify-center items-center p-3 bg-black text-white dark:bg-slate-100 dark:text-black font-palanquin gap-3 font-semibold rounded-lg flex" onClick={()=>{const element = document.getElementById('contact');element.scrollIntoView({behavior:"smooth"});}}>Say Hello <BsTelegram size={30} />
