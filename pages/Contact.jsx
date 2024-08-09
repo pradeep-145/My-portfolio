@@ -41,9 +41,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="mt-44 mb-48">
-      <h1 className="text-center text-5xl font-bold font-palanquin mt-6 dark:text-gray-300 max-sm:text-3xl max-md:text-4xl text-slate-600">Get in touch</h1>
-      <div className="mt-8 flex justify-end items-center">
+    <section className="py-[10rem] flex flex-col gap-24">
+      <h1 className="text-center text-5xl font-bold font-palanquin dark:text-gray-300 max-sm:text-3xl max-md:text-4xl text-slate-600">Get in touch</h1>
+      <div className=" flex justify-end items-center">
         <div className="flex flex-1 flex-col gap-20">
           <button
             className="border-2 bg-black w-48 h-28 hover:scale-105 duration-300 dark:bg-white p-3 rounded-lg flex hover:cursor-pointer justify-center flex-col items-center"

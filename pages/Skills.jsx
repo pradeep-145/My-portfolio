@@ -11,7 +11,7 @@ import figma from "@public/images/figma.svg";
 const Skills = () => {
 
   return (
-    <section className="mt-44" >
+    <section className="py-[12rem] flex flex-col gap-24" >
         <h1 className="text-center text-5xl font-bold font-palanquin dark:text-gray-300 mt-6 max-sm:text-3xl max-md:text-4xl text-slate-600">Skills</h1>
         <div className='mt-6 mb-12 max-md:grid flex  py-12 flex-row gap-5 justify-center items-center max-md:grid-cols-2 max-md:px-6 max-md:mx-24 max-sm:px-5 max-sm:mx-16'>
           <div className='border-2 rounded-md border-gray-500  p-4'>
