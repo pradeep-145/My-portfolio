@@ -10,7 +10,7 @@ const AboutMe = () => {
             <Image src={about} width={250} height={250} className=" max-sm:w-36 hover:scale-[1.01]" alt="About me logo"></Image>
         </div>
         <div className="flex flex-1 justify-center items-center ">
-            <p className="text-lg text-wrap text-justify text-slate-600 dark:text-gray-300 ">Hello! I'm Pradeep Sakthi, a passionate and dedicated Full Stack Developer with a knack for crafting dynamic and responsive web applications. With a strong foundation in both front-end and back-end technologies, I enjoy building seamless and user-friendly digital experiences.As a Full Stack Developer, I bridge the gap between design and technology, ensuring that every project I work on is not only visually appealing but also functionally robust.</p>  
+            <p className="text-lg text-wrap text-justify  text-slate-600 dark:text-gray-300 ">Hello! I'm Pradeep Sakthi, a passionate and dedicated Full Stack Developer with a knack for crafting dynamic and responsive web applications. With a strong foundation in both front-end and back-end technologies, I enjoy building seamless and user-friendly digital experiences.As a Full Stack Developer, I bridge the gap between design and technology, ensuring that every project I work on is not only visually appealing but also functionally robust.</p>  
 
         </div>
         </div>

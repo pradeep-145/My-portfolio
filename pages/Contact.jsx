@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <section className="py-[10rem] flex flex-col gap-24">
       <h1 className="text-center text-5xl font-bold font-palanquin dark:text-gray-300 max-sm:text-3xl max-md:text-4xl text-slate-600">Get in touch</h1>
-      <div className=" flex justify-end items-center">
+      <div className=" flex justify-end items-center  max-lg:flex-col flex-row">
         <div className="flex flex-1 flex-col gap-20">
           <button
             className="border-2 bg-black w-48 h-28 hover:scale-105 duration-300 dark:bg-white p-3 rounded-lg flex hover:cursor-pointer justify-center flex-col items-center"
@@ -74,7 +74,7 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
-                className="bg-transparent border-2 p-4 w-[400px] rounded-full mb-7 border-black dark:border-white dark:text-white"
+                className="bg-transparent border-2 px-14 py-4 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white"
                 required
               />
             </div>
@@ -84,7 +84,7 @@ const Contact = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Name"
-                className="bg-transparent border-2 p-4 w-[400px] rounded-full mb-7 border-black dark:border-white dark:text-white"
+                className="bg-transparent border-2 px-14 py-4 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white"
                 required
               />
             </div>
@@ -93,11 +93,11 @@ const Contact = () => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Enter Description"
-                className="bg-transparent border-2 py-9 px-3 w-[400px] rounded-full mb-7 border-black dark:border-white dark:text-white"
+                className="bg-transparent border-2 py-9 px-14 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white"
                 required
               ></textarea>
             </div>
-            <button type="submit" disabled={loading} className="border-2 p-4 w-[200px] rounded-full mb-7 border-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white  dark:hover:text-black duration-150  ease-in">
+            <button type="submit" disabled={loading} className="border-2 px-10 py-4 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white  dark:hover:text-black duration-150  ease-in">
               {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
