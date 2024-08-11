@@ -35,7 +35,7 @@ export default function Home() {
       <AnimatePresence>
      { gotToTop && 
      <>
-     <motion.div initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}} className="fixed bottom-4 left-6 w-1/2 flex justify-end items-end h-screen text-white">
+     <motion.div initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}} className="fixed bottom-4  w-auto h-auto flex left-1/2 text-white">
         <button onClick={handleGoToTop} className="bg-black block border-2 border-violet-900 p-2 hover:scale-105 duration-300 animate-[bounce_0.5s_infinite] rounded-full"><FaArrowUp /></button>
      </motion.div>
      </>
