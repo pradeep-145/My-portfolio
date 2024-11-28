@@ -7,26 +7,7 @@ import { Toaster, toast } from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 import Head from "next/head";
 export default function RootLayout({ children }) {
-  const [mainTheme, setMainTheme] = useState();
-  const [gradient, setGradient] = useState();
-
-  const getSystemTheme = () => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'Dark';
-    }
-    return 'Light';
-  };
-  useEffect(() => {
-    const systemTheme = getSystemTheme();
-    setMainTheme(systemTheme === 'Dark' ? 'dark-main' : 'main');
-    setGradient(systemTheme === 'Dark' ? 'dark-gradient' : 'gradient');
-  }, []);
-  
-  const handleThemeChange = (newTheme) => {
-    setMainTheme(newTheme === 'Dark' ? 'dark-main' : 'main');
-    setGradient(newTheme === 'Dark' ? 'dark-gradient' : 'gradient');
-  };
-
+ 
   return (
     <html lang="en">
       <head>
@@ -38,13 +19,13 @@ export default function RootLayout({ children }) {
       
       </head>
       <body className="dark selection:bg-sky-700" >
-        <div className={mainTheme}>
+        <div className={"dark-main"}>
           
-        <div className={gradient}></div>
+        <div className={"dark-gradient"}></div>
         </div>
         
         <main className="app">
-          <Nav onThemeChange={handleThemeChange}></Nav>
+          <Nav ></Nav>
           {children}
           <Toaster position="top-center"
           reverseOrder={false} />

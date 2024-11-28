@@ -5,38 +5,10 @@ import { useState, useEffect, useRef } from "react";
 import { IoSunnySharp } from "react-icons/io5";
 import { FaRegMoon } from "react-icons/fa";
 import { motion } from "framer-motion";
-const Nav = ({ onThemeChange }) => {
-  const getSystemTheme = () => {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'Dark';
-        }
-        return 'Light';
-    };
-    
-    const [theme, setTheme] = useState();
-    useEffect(() => {
-        setTheme(getSystemTheme());
-    }, []);
-  const [isOpen, setIsOpen] = useState(false);
-  const [transform, setTransform] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const handleThemeChange = () => {
-      setTheme((prev) => {
-          const newTheme = prev === 'Light' ? 'Dark' : 'Light';
-          onThemeChange(newTheme);
-          return newTheme;
-        });
-    };
-    useEffect(() => {
-        if(theme==='Dark'){
-            document.body.classList.add('dark')
-        }
-        else{
-            document.body.classList.remove('dark')
-        }
-    }, [theme]);
-    
+const Nav = () => {
+    const dropdownRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+    const [transform, setTransform] = useState(false);
         
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -64,11 +36,7 @@ const Nav = ({ onThemeChange }) => {
         <li><button className="border-none p-2 " onClick={()=>{const element=document.getElementById("skills");element.scrollIntoView({behavior:"smooth"})}} >Skills</button></li>
         <li><button className="border-none p-2 " onClick={()=>{const element=document.getElementById("projects");element.scrollIntoView({behavior:"smooth"})}}>Projects</button></li>
         <li><button className="border-none p-2 " onClick={()=>{const element=document.getElementById("achievements");element.scrollIntoView({behavior:"smooth"})}}>Achievements</button></li>
-        <li>
-          <button className="" onClick={handleThemeChange}>
-            {theme === 'Light' ? <IoSunnySharp /> : <FaRegMoon />}
-          </button>
-        </li>
+        
       </ul>
       <div className='lg:hidden flex flex-col mt-4 justify-end items-end'>
         <button onClick={() => {
@@ -91,12 +59,7 @@ const Nav = ({ onThemeChange }) => {
             <li className="hover:bg-slate-300 w-full flex justify-center border-b-2 items-center pt-3 m-0 rounded-sm pl-3 pr-3 text-lg leading-5">
             <button className="border-none p-2 " onClick={()=>{const element=document.getElementById("achievements");element.scrollIntoView({behavior:"smooth"})}}>Achievements</button>            </li>
             
-            <li className="hover:bg-slate-300 w-full flex justify-center border-b-2 items-center pt-3 m-0 rounded-sm pl-3 pr-3 text-lg leading-5">
-              <button className="flex flex-row" onClick={handleThemeChange}>
-                {theme === 'Light' ? <IoSunnySharp /> : <FaRegMoon />}
-                {theme}
-              </button>
-            </li>
+            
           </ul>
         </div>
       </div>
