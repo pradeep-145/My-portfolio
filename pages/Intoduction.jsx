@@ -33,7 +33,7 @@ const Intoduction = () => {
         initial={{y:-50,opacity:0}}
         whileInView={{y:0,opacity:1}}
         transition={{duration:1}}
-        className="text-lg flex flex-row  leading-10 text-slate-600">I am a full stack developer</motion.p>
+        className="text-lg flex flex-row  leading-10 text-slate-600"></motion.p>
         <div
         
         className="gap-8 flex flex-row mt-4" >

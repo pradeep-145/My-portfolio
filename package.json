@@ -14,6 +14,7 @@
     "lottie-web": "^5.12.2",
     "next": "14.2.5",
     "nodemailer": "^6.9.14",
+    "portfolio": "file:",
     "prop-types": "^15.8.1",
     "react": "^18",
     "react-dom": "^18",
@@ -21,7 +22,8 @@
     "react-icons": "^5.2.1",
     "react-lottie": "^1.2.4",
     "react-router-dom": "^6.26.0",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "postcss": "^8",

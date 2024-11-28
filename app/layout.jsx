@@ -29,14 +29,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <Head>
+      <head>
 
         <title>Pradeep Sakthi</title>
         <meta name="description" content="Pradeep Sakthi's Portfolio"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <link rel="icon" href="/images/profileLogo.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       
-      </Head>
+      </head>
       <body className="dark selection:bg-sky-700" >
         <div className={mainTheme}>
           

@@ -11,6 +11,7 @@ import { useEffect,useState } from "react";
 import { FaArrowUp } from "react-icons/fa6";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Head from "next/head";
 export default function Home() {
 
   const [gotToTop,setGoToTop] = useState(false);
@@ -32,6 +33,13 @@ export default function Home() {
 
   return (
     <main className="flex flex-col ">
+      <Head>
+        <title>Pradeep </title>
+        <meta name="description" content="Pradeep Sakthi's Portfolio"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
+
       <AnimatePresence>
      { gotToTop && 
      <>
