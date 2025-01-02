@@ -74,7 +74,7 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
-                className="bg-transparent border-2 px-14 py-4 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white"
+                className="bg-transparent border-2 px-14 py-4 w-auto rounded-2xl mb-7 border-black dark:border-white dark:text-white"
                 required
               />
             </div>
@@ -84,7 +84,7 @@ const Contact = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Name"
-                className="bg-transparent border-2 px-14 py-4 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white"
+                className="bg-transparent border-2 px-14 py-4 w-auto rounded-2xl mb-7 border-black dark:border-white dark:text-white"
                 required
               />
             </div>
@@ -93,7 +93,7 @@ const Contact = () => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Enter Description"
-                className="bg-transparent border-2 py-9 px-14 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white"
+                className="bg-transparent border-2 py-9 px-14 w-auto rounded-2xl mb-7 border-black dark:border-white dark:text-white"
                 required
               ></textarea>
             </div>

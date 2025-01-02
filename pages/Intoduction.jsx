@@ -4,7 +4,7 @@ import { IoLogoGithub } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { FaInstagramSquare } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
-import profile from '@public/images/profile.png'
+import profile from '@public/images/profile.jpg'
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
 import { BsTelegram } from "react-icons/bs";

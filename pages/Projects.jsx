@@ -9,7 +9,7 @@ const Projects = () => {
       {project.map(item=>{
         return(
           <div className="border-2 border-slate-700 dark:text-white bg-transparent flex mb-7 max-lg:flex-col  max-lg:p-2 text-black rounded-3xl" key={item.id} >
-            <Image src={item.logo} width={200} className=" rounded-lg m-7 max-lg:m-auto border-2 dark:border-white border-black"></Image>
+            <Image src={item.logo} width={200} alt="country cart" className=" rounded-lg m-7 max-lg:m-auto border-2 dark:border-white border-black"></Image>
             <div className="flex flex-col gap-3 m-3">
 
             <p className="text-lg font-bold font-satoshi ">{item.title}</p>
@@ -26,10 +26,10 @@ const Projects = () => {
             <div className="flex flex-row gap-3 ">
 
             <button onClick={()=>{
-              window.open(item.link);
+              window.open(item.link1);
             }}className=" dark:text-white dark:bg-violet-500 flex items-center w-auto rounded-full p-2 gap-2">Try Now <FaArrowRight/></button>
             <button onClick={()=>{
-              window.open(item.link);
+              window.open(item.github);
             }}className=" dark:text-white dark:bg- flex items-center w-auto rounded-full p-2 gap-2">GitHub</button>
             </div>
             </div>

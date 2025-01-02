@@ -64,7 +64,7 @@ export default function Home() {
       <section className="max-container w-full padding-x padding-y"id='projects'>
         <Projects/>
       </section>
-      <section className="max-container w-full padding-x padding-y"id='achievements'>
+      <section className="max-container w-full padding-y" id='achievements'>
         <Achievements/>
       </section>
       <section className="max-container w-full padding-x padding-y"id='contact'>
