@@ -15,22 +15,11 @@
   min-height: 100vh;
   position: fixed;
   display: flex;
-  justify-content: center;
-  padding: 120px 24px 160px 24px;
+
+
   pointer-events: none;
   background-color: #1a202c; /* Dark background color */
 }
-.main {
-  width: 100vw;
-  min-height: 100vh;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  padding: 120px 24px 160px 24px;
-  pointer-events: none;
-  
-}
-
 .dark-main:before {
   background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #000000 100%);
   position: absolute;
@@ -40,15 +29,7 @@
   height: 100%;
   top: 0;
 }
-.main:before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #ffffff 100%);
-  position: absolute;
-  content: "";
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
+
 
 .dark-main:after {
   content: "";
@@ -61,16 +42,6 @@
   filter: invert(1);
 }
 
-.main:after {
-  content: "";
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0.4;
-  filter: invert(1);
-}
 
 .dark-gradient {
   height: fit-content;
@@ -96,31 +67,73 @@
   top: 80px;
   opacity: 0.15;
 }
-.gradient {
-  height: fit-content;
-  z-index: 3;
-  width: 100%;
-  max-width: 640px;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  filter: blur(100px) saturate(150%);
-  top: 80px;
-  opacity: 0.15;
+.btn {
+  width: 170px;
+  height: 60px;
+  font-size: 18px;
+  background: #fff;
+  border: none;
+  border-radius: 50px;
+  color: #000;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
 }
-
+.btn:hover {
+  box-shadow: inset 0 0 0 4px hsla(215, 98%, 30%, 1), 
+              inset 0 0 0 8px hsla(125, 98%, 36%, 1), 
+              inset 0 0 0 12px hsla(354, 98%, 30%, 1),
+              inset 0 0 0 16px hsla(256, 96%, 33%, 1);
+              
+  background: #1a202c;
+  color: #fff;
+}
+/* From Uiverse.io by nikk7007 */ 
+.button {
+  
+  border: 2px solid #17C3B2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #17C3B2;
+ }
+ 
+ .button::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #17C3B2;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .button:hover::before {
+  width: 105%;
+ }
+ 
+ .button:hover {
+  color: #111;
+ }
+ 
+/* .btn:hover {
+  box-shadow: inset 0 0 0 4px #ef476f, 
+              inset 0 0 0 8px #ffd166, 
+              inset 0 0 0 12px #06d6a0,
+              inset 0 0 0 16px #118ab2;
+  background: #073b4c;
+  color: #fff;
+} */
 @media screen and (max-width: 640px) {
   .main {
     padding: 0;
@@ -130,7 +143,7 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  @apply relative z-10 flex  flex-col    ;
 }
 
 .black_btn {

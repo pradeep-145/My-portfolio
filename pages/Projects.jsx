@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { project } from "@constants"
+import { IoLogoGithub } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 const Projects = () => {
   return (
@@ -27,10 +28,10 @@ const Projects = () => {
 
             <button onClick={()=>{
               window.open(item.link1);
-            }}className=" dark:text-white dark:bg-violet-500 flex items-center w-auto rounded-full p-2 gap-2">Try Now <FaArrowRight/></button>
+            }}className="button dark:text-white  flex items-center w-auto rounded-full p-2 gap-2">Try Now <FaArrowRight/></button>
             <button onClick={()=>{
               window.open(item.github);
-            }}className=" dark:text-white dark:bg- flex items-center w-auto rounded-full p-2 gap-2">GitHub</button>
+            }}className=" button dark:text-white  flex items-center w-auto rounded-full p-2 gap-2">GitHub <IoLogoGithub size={30}/> </button>
             </div>
             </div>
           </div>

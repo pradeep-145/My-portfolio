@@ -43,13 +43,13 @@ export default function Home() {
       <AnimatePresence>
      { gotToTop && 
      <>
-     <motion.div initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}} className="fixed bottom-4  w-auto h-auto flex left-1/2 text-white">
+     < div initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}} className="fixed bottom-4  w-auto h-auto flex left-1/2 text-white">
         <button onClick={handleGoToTop} className="bg-black block border-2 border-violet-900 p-2 hover:scale-105 duration-300 animate-[bounce_0.5s_infinite] rounded-full"><FaArrowUp /></button>
-     </motion.div>
+     </ div>
      </>
      }
      </AnimatePresence>
-      <section className="max-container  padding-x pt-28 h-screen w-full">
+      <section className=" pt-28 h-screen w-full">
         <Introduction></Introduction>
       </section>
       <section className="max-container w-full  padding-x padding-y" id="about-me">

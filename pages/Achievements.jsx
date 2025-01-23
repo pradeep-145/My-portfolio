@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const AchievementsCarousel = () => {
   const settings = {
+    
     dots: true,
     infinite: true,
     speed: 500,
@@ -18,23 +19,32 @@ const AchievementsCarousel = () => {
   };
 
   const achievements = [
-    "Achievement 1",
-    "Achievement 2",
-    "Achievement 3",
-    "Achievement 4",
+    {
+      name:"",
+      desc:""
+    },
+    {
+      name:"",
+      desc:""
+    },
+    {
+      name:"",
+      desc:""
+    },
   ];
 
   return (
     <div className="relative mx-auto max-w-4xl p-4">
-      <h2 className="text-center text-2xl font-bold text-gray-200 mb-4">
+      <h2 className="text-center text-5xl font-semibold text-gray-200 mb-4">
         Achievements
       </h2>
-      <div className="bg-gray-800 rounded-lg shadow-lg p-6">
+      <div className="bg-black bg-opacity-30 rounded-lg shadow-lg p-6">
         <Slider {...settings}>
           {achievements.map((item, index) => (
             <div key={index} className="text-center">
-              <div className="py-16 px-4 bg-gray-700 rounded-md">
-                <p className="text-white text-lg font-semibold">{item}</p>
+              <div className="py-16 px-4 bg-black bg-opacity-10 rounded-md">
+                <p className="text-white text-lg font-semibold">{item.name}</p>
+                <p className="text-white text-lg font-semibold">{item.desc}</p>
               </div>
             </div>
           ))}

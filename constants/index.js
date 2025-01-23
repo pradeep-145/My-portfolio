@@ -21,3 +21,26 @@ export const project = [{
     stack:['React.js','Node.js','Express.js','MongoDB','Material-UI','JWT' ]
 }
 ];
+export const Achievements=[
+    {
+        id: '1',
+        title: 'Hackfest',
+        description: 'Participated in "Hackfest", a web scraping hackathon.'
+    },
+    {
+        id: '2',
+        title: 'Hackbuzz',
+        description: 'Participated in "Hackbuzz", a full stack development hackathon.'
+    },
+    {
+        id: '3',
+        title: 'Markus',
+        description: '1st prize in paper presentation on the topic "BCI for E-learning Platforms".'
+    },
+    {
+        id: '4',
+        title: 'Acme',
+        description: '3rd prize in paper presentation on the topic "BCI for E-learning Platforms".'
+    },
+
+]

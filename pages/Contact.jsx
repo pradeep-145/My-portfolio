@@ -41,10 +41,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-[10rem] flex flex-col gap-24">
+    <section className="py-[10rem]  flex flex-col  ">
       <h1 className="text-center text-5xl font-bold font-palanquin dark:text-gray-300 max-sm:text-3xl max-md:text-4xl text-slate-600">Get in touch</h1>
       <div className=" flex justify-end items-center  max-lg:flex-col flex-row">
-        <div className="flex flex-1 flex-col gap-20">
+        <div className="flex flex-1 items-center flex-col gap-20">
           <button
             className="border-2 bg-black w-48 h-28 hover:scale-105 duration-300 dark:bg-white p-3 rounded-lg flex hover:cursor-pointer justify-center flex-col items-center"
             onClick={() => {
@@ -66,7 +66,7 @@ const Contact = () => {
             <h5 className="text-[14px] hover:scale-105 duration-300 flex dark:text-black text-white justify-center items-center gap-2 mt-2">contact me <FaArrowRight /></h5>
           </button>
         </div>
-        <div className="flex flex-1 justify-start mt-11 items-center">
+        <div className="flex flex-1 items-center justify-center mt-11">
           <form onSubmit={handleSubmit} className="mt-11 flex flex-col justify-center items-center">
             <div >
               <input
