@@ -12,7 +12,7 @@ const Contact = () => {
   const recipientEmail = 'spradeepsakthi2004@gmail.com';
   const subject = 'Subject Here';
   const body = 'Body of the email';
-  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}`;
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
