@@ -58,7 +58,7 @@ const Intoduction = () => {
 
       </ div>
       <div className="flex flex-1 justify-center items-center">
-        <Image src={profile} alt="Profile Picture" width={550} height={650} className=" rounded-md hover:scale-[1.01]  duration-500 "></Image>
+        <Image src={profile} alt="Profile Picture" className=" md:w-72 rounded-md hover:scale-[1.01] sm:w-56 lg:w-96 w-44  duration-500 "></Image>
       </div>
     </section>
   )

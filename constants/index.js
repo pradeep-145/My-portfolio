@@ -25,22 +25,26 @@ export const Achievements=[
     {
         id: '1',
         title: 'Hackfest',
-        description: 'Participated in "Hackfest", a web scraping hackathon.'
+        Date:'16/12/2023',
+        description: 'Participated in "Hackfest", a web scraping hackathon, where our team developed a application that can scrape data from multiple websites and display it in a user-friendly format.'
     },
     {
         id: '2',
         title: 'Hackbuzz',
-        description: 'Participated in "Hackbuzz", a full stack development hackathon.'
+        Date:'16/04/2024,17/04/2024',
+        description: '2nd prize in "Hackbuzz", a full stack development hackathon, where our team developed a web application for a startup company.'
     },
     {
         id: '3',
         title: 'Markus',
-        description: '1st prize in paper presentation on the topic "BCI for E-learning Platforms".'
+        Date:'19/03/2024',
+        description: '1st prize in paper presentation on the topic "BCI for E-learning Platforms".Our paper primarily focusues on the implementation of Brain Computer Interface in E-learning platforms.'
     },
     {
         id: '4',
         title: 'Acme',
-        description: '3rd prize in paper presentation on the topic "BCI for E-learning Platforms".'
+        Date:'19/03/2024',
+        description: '3rd prize in paper presentation on the topic "BCI for E-learning Platforms".Our paper primarily focusues on the implementation of Brain Computer Interface in E-learning platforms.'
     },
 
 ]
