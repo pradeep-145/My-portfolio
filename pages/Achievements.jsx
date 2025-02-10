@@ -26,9 +26,9 @@ const AchievementsCarousel = () => {
         Achievements
       </h2>
       <div className="bg-black bg-opacity-30 rounded-lg shadow-lg p-6">
-        <Slider {...settings}>
+        <Slider {...settings} className="cursor-grab active:cursor-grabbing">
           {Achievements.map((item, index) => (
-            <div key={index} className="ml-10">
+            <div key={index} className="ml-10 ">
               <div className="py-16 px-4 flex items-start flex-col bg-black bg-opacity-10 rounded-md ">
                 <div className="flex flex-row items-center w-full justify-between pr-16 ">
                 <p className="text-slate-200  text-lg font-semibold">{item.title}</p>

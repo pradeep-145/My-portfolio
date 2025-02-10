@@ -12,7 +12,7 @@ const Skills = () => {
   const [show, setShow] = useState(null);
 
   return (
-    <section className="py-[12rem] flex flex-col gap-24">
+    <section className=" flex flex-col gap-24">
       <h1 className="text-center text-5xl font-bold font-palanquin dark:text-gray-300 mt-6 max-sm:text-3xl max-md:text-4xl text-slate-600">Skills</h1>
       <div className='mt-6 mb-12 max-md:grid flex py-12 flex-row gap-5 justify-center items-center max-md:grid-cols-2 max-md:px-6 max-md:mx-24 max-sm:px-5 max-sm:mx-16'>
         <div onMouseEnter={() => {setShow('html')}} onMouseLeave={() => {setShow(null)}} className="border-2 flex flex-col rounded-md border-gray-500 hover:scale-150 justify-center items-center duration-200  text-slate-300 text-center">

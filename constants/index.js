@@ -1,12 +1,14 @@
 const cc_logo = require('./images/country-cart.png');
 const ta_logo = require('./images/thirukkural-api.png');
-
+const rf_logo=require('./images/recipe-finder.png');
+const vpm_logo=require('./images/vehicle-predictive-maintenance.png');
 export const project = [{
     id:'1',
     logo: cc_logo,
     title: 'Country Cart',
     description: 'Country Cart is an innovative e-commerce platform that bridges the gap between farmers and customers, allowing them to interact and trade directly without any middlemen. This platform empowers farmers by giving them a fair price for their produce and provides customers with fresh, high-quality products straight from the farm. With a user-friendly interface, Country Cart aims to revolutionize the agricultural market by promoting transparency and sustainability.',
     link1:'',
+    try:true,
     github:"https://github.com/pradeep-145/Country-cart",
     stack:['React.js','Node.js','Express.js','MongoDB' ]
 },
@@ -17,9 +19,30 @@ export const project = [{
     title: 'Thirukkural',
     description: 'Thirukkural is a web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js) that provides users with a comprehensive list of Thirukkurals. The application features a clean and intuitive interface, allowing users to easily browse through the Thirukkurals, search for specific ones, and learn about their meanings and interpretations. With a focus on performance and user experience, Thirukkural aims to make the timeless wisdom of Thiruvalluvar accessible to everyone in a modern and engaging way.',
     link1:'https://thirukuralapi.netlify.app',
+    try:true,
     github:'https://github.com/pradeep-145/THIRUKKURAL-API',
     stack:['React.js','Node.js','Express.js','MongoDB' ]
-}
+},
+{
+    id: '3',
+    logo: rf_logo,
+    title: 'Recipe Finder App',
+    description: 'Recipe Finder is a simple and efficient web application that allows users to search for various recipes by fetching data from an external API. Users can also save their favorite recipes in a wishlist using MongoDB. The app includes a rating feature where users can rate and review recipes. Built using React for a dynamic frontend and Express.js for the backend, the application ensures a seamless user experience with fast and accurate recipe search results.',
+    link1: '',
+    try:true,
+    github: 'https://github.com/pradeep-145/Recipe-Finder',
+    stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB']
+},
+{
+    id: '4',
+    logo: vpm_logo,
+    title: 'Vehicle Predictive Maintenance',
+    description: 'This IoT-based mobile application monitors vehicle performance metrics such as fuel level, speed, GPS location, and predictive maintenance alerts. Using MQTT for real-time data transmission from an Arduino-based system, the app stores and visualizes data efficiently with cloud-based SQLite. Users can analyze vehicle performance trends, helping them reduce breakdown risks and optimize fuel consumption.',
+    link1: '',
+    try:false,
+    github: 'https://github.com/pradeep-145/Vehicle-Predictive-Maintenance',
+    stack: ['React Native', 'Node.js', 'MQTT', 'SQLite']
+},
 ];
 export const Achievements=[
     {

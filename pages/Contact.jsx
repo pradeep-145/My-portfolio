@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-[10rem]  flex flex-col  ">
+    <section className="  flex flex-col  ">
       <h1 className="text-center text-5xl font-bold font-palanquin dark:text-gray-300 max-sm:text-3xl max-md:text-4xl text-slate-600">Get in touch</h1>
       <div className=" flex justify-end items-center  max-lg:flex-col flex-row">
         <div className="flex flex-1 items-center flex-col gap-20">
