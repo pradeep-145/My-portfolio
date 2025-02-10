@@ -16,7 +16,7 @@ const Intoduction = () => {
 
     
   return (
-    <section className="p-1 flex flex-1  lg:flex-row justify-center items-center  max-lg:flex-col lg:gap-44 sm:gap-20 md:gap-20 ">
+    <section className="p-1 flex flex-1 lg:flex-row justify-center items-center  max-lg:flex-col lg:gap-44 sm:gap-10 md:gap-10 ">
       
       < div 
       
@@ -24,7 +24,7 @@ const Intoduction = () => {
         < h1 
        
         
-        className="max-md:text-4xl dark:text-neutral-300  max-sm:text-3xl leading-9 max-lg:text-4xl text-4xl flex flex-row font-bold text-slate-600">Hi, I'm Pradeep Sakthi</ h1>
+        className="md:text-4xl dark:text-neutral-300 sm:text-2xl  leading-9 lg:text-4xl text-2xl flex flex-row font-bold text-slate-600">Hi, I'm Pradeep Sakthi</ h1>
         < p
         
         className="text-lg flex flex-row  leading-10 text-slate-600"></ p>
@@ -35,20 +35,20 @@ const Intoduction = () => {
             
             className="text-white dark:rounded-full hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://github.com/pradeep-145')
-            }}> <IoLogoGithub size={30}/> </ button>
+            }}> <IoLogoGithub className=" size-6 lg:size-9 md:size-8 sm:size-5"/> </ button>
             < button 
            
             className="text-white dark:rounded-[4px] hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://www.instagram.com/pradeepsakthi_20_2004?igsh=c3ZoMHB5NTAzeGZh')
-            }}> <FaInstagramSquare size={30}/> </ button>
+            }}> <FaInstagramSquare className=" size-6 lg:size-9 md:size-8 sm:size-5"/> </ button>
             < button 
             
              className="text-white dark:rounded-[4px] hover:scale-[1.1] duration-300" onClick={()=>{
                 window.open('https://www.linkedin.com/in/pradeep-sakthi-sridharan-2364ba256/')
-            }}> <FaLinkedin size={30}/> </ button>
+            }}> <FaLinkedin className=" size-6 lg:size-9 md:size-8 sm:size-5"/> </ button>
         </div>
         <div>
-          <button className="mt-9 btn  justify-center items-center p-3 bg-black text-white font-palanquin gap-3 font-semibold rounded-lg flex" onClick={()=>{const element = document.getElementById('contact');element.scrollIntoView({behavior:"smooth"});}}>Say Hello <BsTelegram size={30} />
+          <button className="mt-9 btn  justify-center items-center bg-black text-white font-palanquin gap-3 font-semibold rounded-lg flex" onClick={()=>{const element = document.getElementById('contact');element.scrollIntoView({behavior:"smooth"});}}>Say Hello <BsTelegram className=" size-6 lg:size-9 md:size-8 sm:size-5" />
           </button>
         </div> 
        

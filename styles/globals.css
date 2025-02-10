@@ -140,21 +140,6 @@
     padding: 0;
   }
 }
-::-webkit-scrollbar {
-  width: 8px;
-  
-}
-::-webkit-scrollbar-thumb {
-  background: #34004d;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #fff;
-}
-::-webkit-scrollbar-track {
-  background: black;
-}
-
 
 /* Tailwind Styles */
 

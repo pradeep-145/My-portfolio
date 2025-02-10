@@ -49,7 +49,7 @@ export default function Home() {
      </>
      }
      </AnimatePresence>
-      <section className=" pt-28 h-screen flex justify-center w-full">
+      <section className=" lg:pt-28  h-screen flex justify-center w-full">
         <Introduction></Introduction>
       </section>
       <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
