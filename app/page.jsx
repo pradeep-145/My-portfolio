@@ -49,24 +49,30 @@ export default function Home() {
      </>
      }
      </AnimatePresence>
-      <section className=" pt-28 h-screen w-full">
+      <section className=" pt-28 h-screen flex justify-center w-full">
         <Introduction></Introduction>
       </section>
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <section className="max-container w-full  padding-x padding-y" id="about-me">
         <AboutMe/>
       </section>
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <section className="max-container  w-full padding-x padding-y"id='education'>
         <Education/>
       </section>
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <section className="max-container w-full  padding-x padding-y" id='skills'>
         <Skills/>
       </section>
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <section className="max-container w-full padding-x padding-y"id='projects'>
         <Projects/>
       </section>
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <section className="max-container w-full padding-y" id='achievements'>
         <Achievements/>
       </section>
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <section className="max-container w-full padding-x padding-y"id='contact'>
         <Contact/>
       </section>

@@ -22,7 +22,7 @@ const AchievementsCarousel = () => {
 
   return (
     <div className="relative mx-auto mt-14 max-w-4xl p-4">
-      <h2 className="text-center text-5xl font-semibold text-gray-200 mb-4">
+      <h2 className="text-center text-5xl font-semibold text-gray-300 mb-4">
         Achievements
       </h2>
       <div className="bg-black bg-opacity-30 rounded-lg shadow-lg p-6">

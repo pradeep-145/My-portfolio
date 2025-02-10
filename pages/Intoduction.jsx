@@ -16,7 +16,7 @@ const Intoduction = () => {
 
     
   return (
-    <section className="p-1 flex flex-1 xl:flex-row  max-lg:flex-col gap-44 md:gap-20 ">
+    <section className="p-1 flex flex-1  lg:flex-row justify-center items-center  max-lg:flex-col lg:gap-44 sm:gap-20 md:gap-20 ">
       
       < div 
       
