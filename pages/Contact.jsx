@@ -1,107 +1,158 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { MdOutgoingMail } from "react-icons/md";
-import { FaArrowRight } from "react-icons/fa";
-import { FaWhatsappSquare } from "react-icons/fa";
+import { FaArrowRight, FaWhatsappSquare } from "react-icons/fa";
 import { useState } from "react";
 import { showToast } from "@utils/showToast";
 
 const Contact = () => {
-  const phoneNumber = '919385352051';
-  const wmessage = 'Hello, Pradeep Sakthi!';
-  const recipientEmail = 'spradeepsakthi2004@gmail.com';
-  const subject = 'Subject Here';
-  const body = 'Body of the email';
-  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}`;
-
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
+  const [formData, setFormData] = useState({
+    email: '',
+    name: '',
+    description: ''
+  });
   const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    const res = await fetch('/api/send-mail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, name, description }),
-    });
+    try {
+      const res = await fetch('/api/send-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setLoading(false);
-
-    if (res.ok) {
-      showToast('success');
-    } else {
+      if (res.ok) {
+        showToast('success');
+        setFormData({ email: '', name: '', description: '' });
+      } else {
+        showToast('error');
+      }
+    } catch (error) {
       showToast('error');
+    } finally {
+      setLoading(false);
     }
   };
 
+  const ContactMethod = ({ icon: Icon, title, subtitle, onClick }) => (
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={onClick}
+      className="bg-white dark:bg-slate-800 rounded-xl shadow-md p-6 flex flex-col items-center 
+      text-center cursor-pointer hover:shadow-lg transition-all duration-300"
+    >
+      <div className="mb-4 text-violet-600 text-4xl">
+        <Icon />
+      </div>
+      <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-2">
+        {title}
+      </h4>
+      <p className="text-sm text-slate-600 dark:text-slate-400">
+        {subtitle}
+      </p>
+    </motion.div>
+  );
+
   return (
-    <section className="  flex flex-col  ">
-      <h1 className="text-center text-5xl font-bold font-palanquin dark:text-gray-300 max-sm:text-3xl max-md:text-4xl text-slate-600">Get in touch</h1>
-      <div className=" flex justify-end items-center  max-lg:flex-col flex-row">
-        <div className="flex flex-1 items-center flex-col gap-20">
-          <button
-            className="border-2 bg-black w-48 h-28 hover:scale-105 duration-300 dark:bg-white p-3 rounded-lg flex hover:cursor-pointer justify-center flex-col items-center"
-            onClick={() => {
-              window.open(gmailComposeUrl);
-            }}
-          >
-            <MdOutgoingMail size={30} className="dark:text-slate-950 text-white" />
-            <h5 className="dark:text-black text-white text-[12px]">spradeepsakthi2004@gmail.com</h5>
-            <h5 className="text-[14px] hover:scale-105 duration-300  dark:text-black text-white flex justify-center items-center gap-2 mt-2">contact me <FaArrowRight /></h5>
-          </button>
-          <button
-            className="border-2 bg-black w-48 h-28 hover:scale-105 duration-300 dark:bg-white p-3 rounded-lg flex hover:cursor-pointer justify-center flex-col items-center"
-            onClick={() => {
-              window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(wmessage)}`);
-            }}
-          >
-            <FaWhatsappSquare size={30} className="dark:text-slate-950 text-white" />
-            <h5 className="dark:text-black text-white text-[12px]">+91 93853 52051</h5>
-            <h5 className="text-[14px] hover:scale-105 duration-300 flex dark:text-black text-white justify-center items-center gap-2 mt-2">contact me <FaArrowRight /></h5>
-          </button>
+    <section className="container mx-auto px-4 py-16">
+      <motion.h1 
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center text-4xl md:text-5xl font-bold text-slate-800 dark:text-gray-300 mb-16"
+      >
+        Get in Touch
+      </motion.h1>
+
+      <div className="grid md:grid-cols-2 gap-12">
+        {/* Contact Methods */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <ContactMethod 
+            icon={MdOutgoingMail}
+            title="Email"
+            subtitle="spradeepsakthi2004@gmail.com"
+            onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=spradeepsakthi2004@gmail.com')}
+          />
+          <ContactMethod 
+            icon={FaWhatsappSquare}
+            title="WhatsApp"
+            subtitle="+91 93853 52051"
+            onClick={() => window.open(`https://wa.me/919385352051?text=Hello%20Pradeep%20Sakthi!`)}
+          />
         </div>
-        <div className="flex flex-1 items-center justify-center mt-11">
-          <form onSubmit={handleSubmit} className="mt-11 flex flex-col justify-center items-center">
-            <div >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-                className="bg-transparent border-2 px-14 py-4 w-auto rounded-2xl mb-7 border-black dark:border-white dark:text-white"
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Name"
-                className="bg-transparent border-2 px-14 py-4 w-auto rounded-2xl mb-7 border-black dark:border-white dark:text-white"
-                required
-              />
-            </div>
-            <div>
-              <textarea
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                placeholder="Enter Description"
-                className="bg-transparent border-2 py-9 px-14 w-auto rounded-2xl mb-7 border-black dark:border-white dark:text-white"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" disabled={loading} className="border-2 px-10 py-4 w-auto rounded-full mb-7 border-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white  dark:hover:text-black duration-150  ease-in">
-              {loading ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
-        </div>
+
+        {/* Contact Form */}
+        <motion.form 
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          onSubmit={handleSubmit}
+          className="bg-white dark:bg-slate-800 rounded-xl shadow-md p-8 space-y-6"
+        >
+          <div>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              required
+              className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 
+              bg-transparent focus:ring-2 focus:ring-violet-500 transition-all duration-300"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              required
+              className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 
+              bg-transparent focus:ring-2 focus:ring-violet-500 transition-all duration-300"
+            />
+          </div>
+          <div>
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+              placeholder="Your Message"
+              required
+              rows={4}
+              className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 
+              bg-transparent focus:ring-2 focus:ring-violet-500 transition-all duration-300"
+            ></textarea>
+          </div>
+          <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            type="submit" 
+            disabled={loading}
+            className="w-full bg-violet-600 text-white py-3 rounded-lg 
+            hover:bg-violet-700 transition-colors duration-300 
+            flex items-center justify-center space-x-2"
+          >
+            {loading ? 'Sending...' : 'Send Message'}
+            {!loading && <FaArrowRight />}
+          </motion.button>
+        </motion.form>
       </div>
     </section>
   );
