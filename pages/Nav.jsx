@@ -40,10 +40,11 @@ const Nav = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative pt-4 px-[220px] flex items-center justify-center">
 
-    <nav className='w-full z-50 h-20  lg:backdrop-blur-sm  fixed top-0' id="nav">
-      <ul className='flex flex-row justify-center dark:text-white gap-24 pt-4 text-xl font-palanquin max-lg:gap-10 text-slate-600 max-lg:hidden items-center tracking-wide'>
+    <nav className='
+h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl p-2 bg-opacity-20 border border-gray-600 hover:-translate-y-2 hover:shadow-md hover:shadow-slate-700 duration-200' id="nav">
+      <ul className='flex flex-row justify-center dark:text-white gap-24 text-xl font-palanquin max-lg:gap-10 text-slate-600 max-lg:hidden items-center tracking-wide'>
         <li><button className="border-none p-2 " onClick={()=>{const element=document.getElementById("about-me");element.scrollIntoView({behavior:"smooth"})}}>About Me</button></li>
         <li><button className="border-none p-2 " onClick={()=>{const element=document.getElementById("education");element.scrollIntoView({behavior:"smooth"})}}>Education</button></li>
         <li><button className="border-none p-2 " onClick={()=>{const element=document.getElementById("skills");element.scrollIntoView({behavior:"smooth"})}} >Skills</button></li>
