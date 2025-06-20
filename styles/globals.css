@@ -15,8 +15,6 @@
   min-height: 100vh;
   position: fixed;
   display: flex;
-
-
   pointer-events: none;
   background-color: #1a202c; /* Dark background color */
 }
@@ -30,7 +28,6 @@
   top: 0;
 }
 
-
 .dark-main:after {
   content: "";
   z-index: 1;
@@ -41,7 +38,6 @@
   opacity: 0.4;
   filter: invert(1);
 }
-
 
 .dark-gradient {
   height: fit-content;
@@ -80,61 +76,51 @@
   transition: all 0.4s;
 }
 .btn:hover {
-  box-shadow: inset 0 0 0 4px hsla(215, 98%, 30%, 1), 
-              inset 0 0 0 8px hsla(125, 98%, 36%, 1), 
-              inset 0 0 0 12px hsla(354, 98%, 30%, 1),
-              inset 0 0 0 16px hsla(256, 96%, 33%, 1);
-              
+  box-shadow: inset 0 0 0 4px hsla(215, 98%, 30%, 1),
+    inset 0 0 0 8px hsla(125, 98%, 36%, 1),
+    inset 0 0 0 12px hsla(354, 98%, 30%, 1),
+    inset 0 0 0 16px hsla(256, 96%, 33%, 1);
+
   background: #1a202c;
   color: #fff;
 }
-/* From Uiverse.io by nikk7007 */ 
+/* From Uiverse.io by nikk7007 */
 .button {
-  
-  border: 2px solid #17C3B2;
+  border: 2px solid #17c3b2;
   position: relative;
   overflow: hidden;
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 1;
   font-family: inherit;
-  color: #17C3B2;
- }
- 
- .button::before {
-  content: '';
+  color: #17c3b2;
+}
+
+.button::before {
+  content: "";
   width: 0;
   height: 300%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #17C3B2;
-  transition: .5s ease;
+  background: #17c3b2;
+  transition: 0.5s ease;
   display: block;
   z-index: -1;
- }
- 
- .button:hover::before {
+}
+
+.button:hover::before {
   width: 105%;
- }
- 
- .button:hover {
+}
+
+.button:hover {
   color: #111;
- }
- 
-/* .btn:hover {
-  box-shadow: inset 0 0 0 4px #ef476f, 
-              inset 0 0 0 8px #ffd166, 
-              inset 0 0 0 12px #06d6a0,
-              inset 0 0 0 16px #118ab2;
-  background: #073b4c;
-  color: #fff;
-} */
- 
+}
+
 @media screen and (max-width: 640px) {
   .main {
     padding: 0;
@@ -144,7 +130,7 @@
 /* Tailwind Styles */
 
 .app {
-  @apply relative z-10 flex  flex-col    ;
+  @apply relative z-10 flex flex-col;
 }
 
 .black_btn {
@@ -237,4 +223,88 @@
 
 .flex-between {
   @apply flex justify-between items-center;
+}
+
+/* Enhanced UI Elements & Animations */
+
+/* Project Card Styles */
+.project-card {
+  @apply transition-all duration-300 hover:shadow-xl border border-transparent hover:border-violet-200 dark:hover:border-violet-900/30;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Achievement Slider and Cards */
+.achievement-slider .slick-dots {
+  @apply bottom-[-30px];
+}
+
+.achievement-card {
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.custom-dots {
+  @apply mt-8 !important;
+}
+
+.achievement-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(124, 58, 237, 0.1),
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+/* Education Card Effects */
+.perspective-card {
+  perspective: 1000px;
+}
+
+.education-card-info {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation Utilities */
+@keyframes gradient-xy {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-gradient-xy {
+  animation: gradient-xy 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Enhanced Form Styling */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
 }
