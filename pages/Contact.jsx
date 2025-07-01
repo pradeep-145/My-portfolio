@@ -77,7 +77,7 @@ const Contact = () => {
       whileHover={{ scale: 1.05, y: -5 }}
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
-      className="bg-white dark:bg-slate-800 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 p-6 flex flex-col items-center 
+      className="bg-white dark:bg-slate-800 rounded-xl shadow-md border dark:border-gray-700 p-6 flex flex-col items-center 
       text-center cursor-pointer hover:shadow-xl hover:shadow-violet-200 dark:hover:shadow-violet-900/50 transition-all duration-300 border-b-4 border-violet-500"
     >
       <div className="mb-4 text-violet-600 dark:text-violet-400 text-4xl">
