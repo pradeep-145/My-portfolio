@@ -22,7 +22,7 @@ export const project = [
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website built with Next.js and Tailwind CSS featuring smooth animations and dark mode support.",
-    logo: "/images/portfolio-preview.jpg",
+    logo: cc_logo, // Using existing image instead of missing portfolio-preview.jpg
     stack: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
     github: "https://github.com/pradeep-145/My-portfolio",
     try: true,
